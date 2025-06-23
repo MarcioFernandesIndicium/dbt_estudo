@@ -1,0 +1,30 @@
+# models/sources.yml
+
+version: 2
+
+sources:
+  # Este é o seu primeiro grupo de fontes de dados.
+  # Pode ter vários destes no mesmo ficheiro.
+  - name: jaffle_shop # Nome do grupo de fontes. Usaremos este nome na função source().
+    description: "Fontes de dados brutos da loja Jaffle Shop."
+    
+    # IMPORTANTE: Lembre-se de alterar o schema para o seu.
+    schema: default 
+    
+    # Aqui listamos TODAS as tabelas que pertencem a este grupo.
+    tables:
+      - name: jaffle_shop_customers
+        description: "Tabela de clientes brutos."
+        
+      - name: jaffle_shop_orders
+        description: "Tabela de pedidos brutos."
+
+      - name: stripe_payments
+        description: "não tenho certeza ainda"
+        
+  # Se no futuro você tivesse outra fonte de dados (ex: de um sistema de marketing),
+  # você poderia adicioná-la aqui mesmo, neste ficheiro:
+  # - name: google_ads
+  #   schema: raw_google_ads
+  #   tables:
+  #     - name: ad_spend
